@@ -9,7 +9,21 @@
 <body>
     
 
-
+    <div id="barra" style="background-color: #ddd; height: 20px; border-radius: 5px; margin: 10px;">
+        <div id="valor" style="background-color: #007bff; height: 100%; border-radius: 5px;"></div>
+      </div>
+      
+      <script>
+        let valorBarra = 50;
+        let barra = document.querySelector('#valor');
+        
+        barra.style.width = valorBarra + '%';
+        
+        valorBarra = 75;
+        barra.style.width = valorBarra + '%';
+      </script>
+      
+    
 
 
     <script src="script.js"></script>

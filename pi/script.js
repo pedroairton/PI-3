@@ -76,12 +76,45 @@ function calculo() {
         const aviso = document.getElementById('aviso')
         aviso.innerHTML = (`<b>Preencha todos os campos.</b>`)
     }
+
+
+    // BARRA GRAFICO
+
+    let valorBarra = 50
+    let barra = document.querySelector('#valor');
+
+    barra.style.width = valorBarra + '%';
+        
+    valorBarra = (media1*10)*2;
+    barra.style.width = valorBarra + '%';
+
+
+    let valorBarra2 = 50
+    let barra2 = document.querySelector('#valor2');
+
+    barra2.style.width = valorBarra2 + '%';
+        
+    valorBarra2 = (media2*10)*2;
+    barra2.style.width = valorBarra2 + '%';
+
+    console.log(valorBarra,+''+valorBarra2)
+
+
+
+
+
 }
 function login() {
     const login = document.querySelector('.login')
     const page = document.querySelector('.page')
     login.classList.add('unactive')
     page.classList.remove('unactive')
+}
+function graf() {
+    const graf = document.querySelector('.graf')
+    const login = document.querySelector('.login')
+    login.classList.add('unactive')
+    graf.classList.remove('unactive')
 }
 
 // ESTILIZAÇÃO
@@ -136,20 +169,6 @@ function cleanTextLog() {
 function cleanTextPw() {
     pw.value=''
 }
-
-
-// label.forEach(function(element,index,array) {
-//   element.addEventListener('click',function() {
-//     // console.log(array)
-//     let i = 0
-//     while(i <= array.length - 1) {
-//       array[i].classList.remove('ativo')
-//       i++
-//     }
-//     array[index].classList.add('ativo')
-//   })
-// })
-
 
 
 
