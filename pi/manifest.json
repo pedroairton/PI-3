@@ -1,0 +1,25 @@
+{
+    "name": "Formulário SENAC Idiomas",
+    "short_name": "SENAC",
+    "icons": [
+      {
+        "src": "./img/senaclogo256150.png",
+        "sizes": "256x256",
+        "type": "image/png",
+        "purpose": "any maskable"
+      },
+      {
+        "src": "./img/senaclogo512300.jpg",
+        "type": "image/jpg",
+        "sizes": "512x512",
+        "purpose": "any maskable"
+      }
+    ],    
+    
+    "start_url": "https://formulariosenacidiomas.netlify.app",
+    "background_color": "#ffffff",
+    "theme_color": "#0051a0",
+    "display": "standalone",
+    "orientation": "portrait"
+  }
+  

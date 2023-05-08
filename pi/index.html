@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="shortcut icon" href="./img/senacicon.png" type="image/x-icon">
+
+    <title>Formulário de Avaliação</title>
+</head>
+<body>
+  
+  <section id="logo">
+    <img src="./img/senaclogo.png" width="64" height="38" alt="senaclogo">
+  </section>
+
+  <section class="login ">
+    <section class="containerlog">
+        <div style="display: flex; justify-content: center;">
+            <img src="./img/senaclogo128.png" alt="">
+          </div>
+          <div style="display: flex; justify-content: center; padding-top: 2rem;">
+            <input type="text" value="Login" onfocus="cleanTextLog(this)" class="log">
+          </div>
+          <div style="display: flex; justify-content: center; padding-top: 1rem;">
+            <input type="text" value="Senha" onfocus="cleanTextPw()" class="pw">
+          </div>
+
+          <div style="display: flex; justify-content: center;">
+            <button class="btnlog" onclick="login()">Entrar</button>
+          </div>
+    </section>
+  </section>
+  <section class="msg unactive">
+    <section class="container">
+      <div style="display: flex; justify-content: center;">
+        <img src="./img/senaclogo128.png" alt="">
+      </div>
+      <div style="display: flex; justify-content: center;">
+        <h3>Agradecemos o seu Feedback!</h3>
+      </div>
+      <div></div>
+      
+    </section>
+  </section>
+
+  <section class="page unactive">
+   
+    <section id="topo">
+        <b>FORMULÁRIO DE AVALIAÇÃO</b>
+    </section>
+  
+    <section class="container a">
+        <div id="nome">
+            <b>Nome do Professor 1</b>
+        </div>
+        <div id="titulo">
+            O Professor cumpre os horários ?
+        </div>
+        <div class="rating">
+            <input type="radio" id="star5p1" class="star p1" name="rating" value="1" />
+            <label for="star5p1" class="label p1"></label>
+            <input type="radio" id="star4p1" class="star p1" name="rating" value="2" />
+            <label for="star4p1" class="label p1"></label>
+            <input type="radio" id="star3p1" class="star p1" name="rating" value="3" />
+            <label for="star3p1" class="label p1"></label>
+            <input type="radio" id="star2p1" class="star p1" name="rating" value="4" />
+            <label for="star2p1" class="label p1"></label>
+            <input type="radio" id="star1p1" class="star p1" name="rating" value="5" />
+            <label for="star1p1" class="label p1" ></label>
+          </div>
+          <div id="titulo">
+            O Professor segue o material de estudo ?
+        </div>
+        <div class="rating p2">
+            <input type="radio" id="star5p2" class="star p2" name="rating" value="1" />
+            <label for="star5p2" class="label p2"></label>
+            <input type="radio" id="star4p2" class="star p2" name="rating" value="2" />
+            <label for="star4p2" class="label p2"></label>
+            <input type="radio" id="star3p2" class="star p2" name="rating" value="3" />
+            <label for="star3p2" class="label p2"></label>
+            <input type="radio" id="star2p2" class="star p2" name="rating" value="4" />
+            <label for="star2p2" class="label p2"></label>
+            <input type="radio" id="star1p2" class="star p2" name="rating" value="5" />
+            <label for="star1p2" class="label p2"></label>
+          </div>
+          <div id="titulo">
+            O Professor apresenta conteúdos de maneira clara e objetiva?
+          </div>
+        <div class="rating">
+            <input type="radio" id="star5p3" class="star p3" name="rating" value="1" />
+            <label for="star5p3" class="label p3"></label>
+            <input type="radio" id="star4p3" class="star p3" name="rating" value="2" />
+            <label for="star4p3" class="label p3"></label>
+            <input type="radio" id="star3p3" class="star p3" name="rating" value="3" />
+            <label for="star3p3" class="label p3"></label>
+            <input type="radio" id="star2p3" class="star p3" name="rating" value="4" />
+            <label for="star2p3" class="label p3"></label>
+            <input type="radio" id="star1p3" class="star p3" name="rating" value="5" />
+            <label for="star1p3" class="label p3"></label>
+          </div>
+          <div id="titulo">
+            O Professor tem domínio sobre o conteúdo abordado nas aulas?
+          </div>
+        <div class="rating">
+            <input type="radio" id="star5p4" class="star p4" name="rating" value="1" />
+            <label for="star5p4" class="label p4"></label>
+            <input type="radio" id="star4p4" class="star p4" name="rating" value="2" />
+            <label for="star4p4" class="label p4"></label>
+            <input type="radio" id="star3p4" class="star p4" name="rating" value="3" />
+            <label for="star3p4" class="label p4"></label>
+            <input type="radio" id="star2p4" class="star p4" name="rating" value="4" />
+            <label for="star2p4" class="label p4"></label>
+            <input type="radio" id="star1p4" class="star p4" name="rating" value="5" />
+            <label for="star1p4" class="label p4"></label>
+          </div>
+          <div id="titulo">
+            O Professor é respeitoso com os alunos em sala de aula?
+          </div>
+        <div class="rating">
+            <input type="radio" id="star5p5" class="star p5" name="rating" value="1" />
+            <label for="star5p5" class="label p5"></label>
+            <input type="radio" id="star4p5" class="star p5" name="rating" value="2" />
+            <label for="star4p5" class="label p5"></label>
+            <input type="radio" id="star3p5" class="star p5" name="rating" value="3" />
+            <label for="star3p5" class="label p5"></label>
+            <input type="radio" id="star2p5" class="star p5" name="rating" value="4" />
+            <label for="star2p5" class="label p5"></label>
+            <input type="radio" id="star1p5" class="star p5" name="rating" value="5" />
+            <label for="star1p5" class="label p5"></label>
+          </div>
+          <div class="result f1"></div>
+    </section>
+    <section class="container b">
+        <div id="nome">
+            <b>Nome do Professor 2</b>
+        </div>
+        <div id="titulo">
+          O Professor cumpre os horários ?
+        </div>
+        <div class="rating">
+            <input type="radio" id="star5p6" class="star p6" name="rating" value="1" />
+            <label for="star5p6" class="label p6"></label>
+            <input type="radio" id="star4p6" class="star p6" name="rating" value="2" />
+            <label for="star4p6" class="label p6"></label>
+            <input type="radio" id="star3p6" class="star p6" name="rating" value="3" />
+            <label for="star3p6" class="label p6"></label>
+            <input type="radio" id="star2p6" class="star p6" name="rating" value="4" />
+            <label for="star2p6" class="label p6"></label>
+            <input type="radio" id="star1p6" class="star p6" name="rating" value="5" />
+            <label for="star1p6" class="label p6"></label>
+          </div>
+          <div id="titulo">
+            O Professor segue o material de estudo ?
+        </div>
+        <div class="rating">
+            <input type="radio" id="star5p7" class="star p7" name="rating" value="1" />
+            <label for="star5p7" class="label p7"></label>
+            <input type="radio" id="star4p7" class="star p7" name="rating" value="2" />
+            <label for="star4p7" class="label p7"></label>
+            <input type="radio" id="star3p7" class="star p7" name="rating" value="3" />
+            <label for="star3p7" class="label p7"></label>
+            <input type="radio" id="star2p7" class="star p7" name="rating" value="4" />
+            <label for="star2p7" class="label p7"></label>
+            <input type="radio" id="star1p7" class="star p7" name="rating" value="5" />
+            <label for="star1p7" class="label p7"></label>
+          </div>
+          <div id="titulo">
+            O Professor apresenta conteúdos de maneira clara e objetiva?
+        </div>
+        <div class="rating">
+            <input type="radio" id="star5p8" class="star p8" name="rating" value="1" />
+            <label for="star5p8" class="label p8"></label>
+            <input type="radio" id="star4p8" class="star p8" name="rating" value="2" />
+            <label for="star4p8" class="label p8"></label>
+            <input type="radio" id="star3p8" class="star p8" name="rating" value="3" />
+            <label for="star3p8" class="label p8"></label>
+            <input type="radio" id="star2p8" class="star p8" name="rating" value="4" />
+            <label for="star2p8" class="label p8"></label>
+            <input type="radio" id="star1p8" class="star p8" name="rating" value="5" />
+            <label for="star1p8" class="label p8"></label>
+          </div>
+          <div id="titulo">
+            O Professor tem domínio sobre o conteúdo abordado nas aulas?
+        </div>
+        <div class="rating">
+            <input type="radio" id="star5p9" class="star p9" name="rating" value="1" />
+            <label for="star5p9" class="label p9"></label>
+            <input type="radio" id="star4p9" class="star p9" name="rating" value="2" />
+            <label for="star4p9" class="label p9"></label>
+            <input type="radio" id="star3p9" class="star p9" name="rating" value="3" />
+            <label for="star3p9" class="label p9"></label>
+            <input type="radio" id="star2p9" class="star p9" name="rating" value="4" />
+            <label for="star2p9" class="label p9"></label>
+            <input type="radio" id="star1p9" class="star p9" name="rating" value="5" />
+            <label for="star1p9" class="label p9"></label>
+          </div>
+          <div id="titulo">
+            O Professor é respeitoso com os alunos em sala de aula?
+        </div>
+        <div class="rating">
+            <input type="radio" id="star5p10" class="star p10" name="rating" value="1" />
+            <label for="star5p10" class="label p10"></label>
+            <input type="radio" id="star4p10" class="star p10" name="rating" value="2" />
+            <label for="star4p10" class="label p10"></label>
+            <input type="radio" id="star3p10" class="star p10" name="rating" value="3" />
+            <label for="star3p10" class="label p10"></label>
+            <input type="radio" id="star2p10" class="star p10" name="rating" value="4" />
+            <label for="star2p10" class="label p10"></label>
+            <input type="radio" id="star1p10" class="star p10" name="rating" value="5" />
+            <label for="star1p10" class="label p10"></label>
+          </div>
+          <div class="result f2"></div>
+    </section
+    >
+    <section class="container" style="padding-top: 10px;">
+      <div id="titulo">Insira o seu E-mail</div>
+      <input type="email" name="" class="email">
+    </section>
+
+    <section class="container" id="aviso" style="display: flex; justify-content: center;">
+
+    </section>
+    <div id="envio">
+      <button onclick="calculo()" class="send">
+        <b>Enviar</b>
+      </button>
+    </div>
+  
+</section>
+    
+      <script src="script.js"></script>
+      <!-- SERVICE WORKER -->
+      <script>
+        if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js').then(function(registration) {
+      console.log('Service Worker registrado com sucesso com o escopo:', registration.scope);
+      }).catch(function(error) {
+      console.log('Falha ao registrar o Service Worker:', error);
+      });
+    }
+      </script>
+  
+</body>
+</html>
