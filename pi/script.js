@@ -59,11 +59,11 @@ const email = document.querySelector('.email')
 
 function calculo() {
     let media1 = (qt[0]+qt[1]+qt[2]+qt[3]+qt[4]) / qt.length
-    console.log(media1)
+    console.log('a média 1 é ' + media1)
     // rst1.innerHTML = (`A média é de ☆${media1}`)
 
     let media2 = (qt2[0]+qt2[1]+qt2[2]+qt2[3]+qt2[4]) / qt2.length
-    console.log(media2)
+    console.log('a média 2 é ' + media2)
     // rst2.innerHTML = (`A média é de ☆${media2}`)
 
     const page = document.querySelector('.page')
@@ -80,12 +80,20 @@ function calculo() {
 
     // BARRA GRAFICO
 
+
+    textop1 = document.querySelector('.mediap1')
+    textop2 = document.querySelector('.mediap2')
+
+    textop1.innerHTML = (`<b>${media1}</b>`)
+    textop2.innerHTML = (`<b>${media2}</b>`)
+
     let valorBarra = 50
     let barra = document.querySelector('#valor');
 
     barra.style.width = valorBarra + '%';
         
     valorBarra = (media1*10)*2;
+    // console.log(valorBarra +' valorbarra')
     barra.style.width = valorBarra + '%';
 
 
@@ -99,6 +107,53 @@ function calculo() {
 
     console.log(valorBarra,+''+valorBarra2)
 
+    // VERDE CLARO
+    if(media1 >= 4.0 && media1 < 4.5) {
+        barra.style.backgroundColor = '#14ca00'
+        textop1.style.color = '#14ca00'
+    }
+    // VERDE ESCURO
+    else if(media1 >= 4.5) {
+        barra.style.backgroundColor = '#0d7d00'
+        textop1.style.color = '#0d7d00'
+    }
+
+    //AMARELO
+    else if(media1 >= 3.0 && media1 < 4.0) {
+        barra.style.backgroundColor = '#ffd700'
+        textop1.style.color = '#b6aa00'
+    }
+    
+    //VERMELHO
+    else if(media1 >= 0.0 && media1 < 3.0) {
+        barra.style.backgroundColor = '#ce0000'
+        textop1.style.color = '#ce0000'
+    }
+    
+    // BARRA DE GRÁFICO 2 ----------------------------------------------
+    
+    // VERDE CLARO
+    if(media2 >= 4.0 && media2 < 4.5) {
+        barra2.style.backgroundColor = '#14ca00'
+        textop2.style.color = '#14ca00'
+    }
+    // VERDE ESCURO
+    else if(media2 >= 4.5) {
+        barra2.style.backgroundColor = '#0d7d00'
+        textop2.style.color = '#0d7d00'
+    }
+
+    //AMARELO
+    else if(media2 >= 3.0 && media2 < 4.0) {
+        barra2.style.backgroundColor = '#ffd700'
+        textop2.style.color = '#b6aa00'
+    }
+    
+    //VERMELHO
+    else if(media2 >= 0.0 && media2 < 3.0) {
+        barra2.style.backgroundColor = '#ce0000'
+        textop2.style.color = '#ce0000'
+    }
 
 
 
@@ -115,6 +170,13 @@ function graf() {
     const login = document.querySelector('.login')
     login.classList.add('unactive')
     graf.classList.remove('unactive')
+}
+function retorno() {
+    const msg = document.querySelector('.msg')
+    const login = document.querySelector('.login')
+
+    msg.classList.add('unactive')
+    login.classList.remove('unactive')
 }
 
 // ESTILIZAÇÃO
