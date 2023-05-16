@@ -215,6 +215,32 @@ color: #FFD700;
 cursor: pointer;
 }
 
+#barra{
+  background-color: #ddd; 
+  height: 20px; 
+  border-radius: 3px; width: 30%; 
+  border: solid 1px #f0f0f0;
+  animation: barras 2.5s;
+}
+
+#barra2{
+  background-color: #ddd; 
+  height: 20px; 
+  border-radius: 3px; 
+  width: 30%; 
+  border: solid 1px #f0f0f0;
+  animation: barras 2.5s;
+
+}
+
+@keyframes barras {
+  from {
+    width: 1%;
+  }
+  to {
+    width: 30%;
+  }
+}
 @keyframes show {
   from {
     opacity: 0;

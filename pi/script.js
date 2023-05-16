@@ -84,7 +84,7 @@ function calculo() {
     textop1 = document.querySelector('.mediap1')
     textop2 = document.querySelector('.mediap2')
 
-    textop1.innerHTML = (`<b>${media1}</b>`)
+    textop1.innerHTML = (`<h2><b>${media1}</b></h2>`)
     textop2.innerHTML = (`<b>${media2}</b>`)
 
     let valorBarra = 50
