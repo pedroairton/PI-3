@@ -1,0 +1,251 @@
+body{
+  background-color: #0051a0;
+  display: grid;
+  grid-template-columns: 2fr 3fr 2fr;
+  font-family: sans-serif;
+  margin: 0 auto;
+
+}
+.page{
+  grid-column: 2/3;
+}
+.graf{
+  grid-column: 2/3;
+}
+.login{
+    grid-column: 2/3;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.msg{
+  grid-column: 2/3;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+}
+
+form {
+  grid-column: 2/3;
+}
+  /*MOBILE*/
+@media only screen and (max-width: 767px) {
+
+  body{
+    background-color: #0051a0;
+    display: grid;
+    grid-template-columns: 1fr 7fr 1fr;
+    font-family: sans-serif;
+    margin: 0 auto;
+  }
+  
+.container{
+  background-color: #FFFF;
+  grid-column: 2/3;
+  border-radius: 2%;
+  margin-bottom: 2rem;
+
+}
+.containerlog{
+    background-color: #FFFF;
+    border-radius: 2%;
+    margin-bottom: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+  
+  }
+
+}
+@media only screen and (min-width: 768px) {
+  .container{
+    background-color: #FFFF;
+    grid-column: 2/3;
+    border-radius: 2%;
+    margin-bottom: 2rem;
+    animation: show 1.5s forwards;
+  }
+  .containerlog{
+    background-color: #FFFF;
+    grid-column: 2/3;
+    border-radius: 2%;
+    margin-bottom: 2rem;
+    animation: show 1.5s forwards;
+  }
+  b {
+    animation: show 1.5s forwards;
+  
+  }
+  
+.rating {
+  position: relative;
+  display: flex;
+  color: #e6e6e6;
+  font-size: 30px;
+  height: 30px;
+  width: 150px;
+  margin: 10px 0;
+  /* transform: scaleX(-1); */
+  padding-bottom: 1rem;
+  /* border-bottom: solid 2px #f0f0f0; */
+  animation: showmini 3.5s forwards;
+
+}
+
+}
+
+#logo {
+  grid-column: 2/3;
+  justify-content: center;
+  display: flex;
+  width: 100%;
+  height: auto;
+}
+
+#titulo{
+  margin-left: 5px;
+  background-color: #f0f0f0;   
+  animation: showmini 2.5s forwards;
+ 
+}
+#nome{
+  justify-content: center;
+  display: flex;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  background-color: #f0f0f0;    
+}
+#topo{
+  grid-column: 1/4;
+  background-color: #ffffff;
+  justify-content: center;
+  display: flex;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+#envio{
+grid-column: 2/3;
+justify-content: center;
+display: flex;
+
+}
+.send{
+width: 5rem;
+height: 3rem;
+background-color: #ffd700;
+border-radius: 3%;
+transition: 0.3s;
+border: 1px solid #FFD700;
+text-transform: uppercase;
+}
+
+.send:hover{
+  background-color: #fff1a0;
+}
+
+.btnlog{
+background-color: #0051a0;
+border: none;
+color: white;
+padding: 10px 42px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+margin: 10px 6px;
+cursor: pointer;
+}
+
+
+.rating {
+  position: relative;
+  display: flex;
+  color: #e6e6e6;
+  font-size: 30px;
+  height: 30px;
+  width: 150px;
+  margin: 10px 0;
+  /* transform: scaleX(-1); */
+  padding-bottom: 1rem;
+  /* border-bottom: solid 2px #f0f0f0; */
+  animation: showmini 2.5s forwards;
+
+}
+
+.rating input[type="radio"] {
+  display: none;
+}
+
+.rating label {
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 20%;
+  text-align: center;
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+  color: darkgray;
+  
+}
+
+.rating label:before {
+  content: "\2605";
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.result {
+  margin-bottom: 1rem;
+  margin-left: 10px;
+}
+/* classe para estrelas selecionadas */
+.rating .star.ativo {
+color: #FFD700;
+}
+
+/* classe para hover */
+.rating .star:not(.ativo):hover,
+.rating .star:not(.ativo):hover ~ .star {
+color: #FFD700;
+cursor: pointer;
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+    transform: translate3d(-20px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes showmini {
+  from {
+    opacity: 0;
+    transform: translate3d(-10px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.email{
+margin-top: 10px;
+margin-left: 10px;
+margin-bottom: 10px;
+}
+
+/*JS*/
+
+.label.ativo {
+color:#FFD700
+}
+
+.unactive{
+    display: none;
+  }
+
