@@ -54,6 +54,8 @@ form {
   }
 
 }
+
+/* DESKTOP */
 @media only screen and (min-width: 768px) {
   .container{
     background-color: #FFFF;
@@ -90,6 +92,29 @@ form {
 }
 
 }
+.foto{
+  width: 70px;
+  float: left;
+}
+/* SETA DE INTERAÇAO */
+.arrow{
+  transform: rotate(-90deg);
+  cursor: pointer;
+}
+
+.ang-ex{
+  animation-name: ang;
+  animation-duration: 0.5s;
+  transform: rotate(0deg);
+}
+@keyframes ang {
+  from {
+    transform: rotate(-90deg);
+  }
+  to{
+    transform: rotate(0deg);
+  }
+}
 
 #logo {
   grid-column: 2/3;
@@ -111,6 +136,7 @@ form {
   margin-bottom: 1rem;
   margin-top: 1rem;
   background-color: #f0f0f0;    
+  
 }
 #topo{
   grid-column: 1/4;

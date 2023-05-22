@@ -181,6 +181,12 @@ function retorno() {
 
 // ESTILIZAÇÃO
 
+const seta = document.querySelector('.arrow')
+
+seta.addEventListener('click', function() {
+  seta.classList.add('ang-ex');
+});
+
 
 let label = []
 
