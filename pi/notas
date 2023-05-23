@@ -17,16 +17,3 @@ OPÇÃO DE RATIFICAR/DESCARTAR AVALIAÇÃO PELA DIRETORIA
 MAIS PERGUNTAS (?)
 
 ...
-
-<div id="titulo"><b>Comentários adicionais</b> (opcional)</div>
-      <input type="cmt" name="" class="cmt" style="margin: 8px; width: 50%;">
-      
-.cmt{
-  border: 1px solid #ccc;
-  margin-bottom: 10px;
-}
-.cmt textarea {
-  width: 100%;
-  height: 100px;
-  resize: vertical;
-}
