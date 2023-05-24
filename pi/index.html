@@ -7,9 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="form.css">
   <link rel="manifest" href="manifest.json">
-  <link rel="shortcut icon" href="./img/senacicon.png" type="image/x-icon">
+  <link rel="shortcut icon" href="./img/ff.png" type="image/x-icon">
 
-  <title>Formulário de Avaliação</title>
+  <title>FormiFy - Formulário de Avaliação</title>
 </head>
 
 <body>
@@ -43,35 +43,175 @@
 
   <!-- PÁGINA DE RESULTADOS -->
   <section class="graf unactive">
-    <section class="container">
+    <section class="container" style="padding-bottom: 1rem; height: 2070px;">
       <div style="padding-left: 1rem; padding-top: 1rem; display: flex; justify-content: center;">
         <h3>Gráfico dos Resultados:</h3>
       </div>
+      <section style="background-color: #f0f0f0; margin-bottom: 1rem;" class="desc-prof">
+        <div style="padding-left: 1rem; padding-top: 5px;">
+          <h4>NOME DO PROFESSOR 1:</h4>
+        </div>
+          <div>
+            <img class="arrow rt" src="./img/icons8-v-50.png" alt="">
+          </div>
+          <div class="txt-prof">
+          <div style="display: flex; margin-top: 10px;">
+            <img
+              src="./img/ícone-masculino-da-imagem-do-perfil-do-avatar-do-defeito-placeholder-cinzento-da-foto-do-homem-88414414.jpg"
+              alt="" class="foto" style="margin-left: 1rem;"> 
+              
+          </div>
+          
+          <div class="grafc" style="align-items: center; margin-left: 1rem;">
+            <div style="margin-top: 1rem;"><h3>Geral:</h3></div>
+            <div class="mediap1">
+              <h2><b>0.00</b></h2>
+            </div>
+            <div id="barra">
+              <div id="valor" style="background-color: #2F3C7E; height: 15px; width: 30%; border-radius: 3px;"></div>
+            </div>
+          </div>
 
-      <div style="padding-left: 1rem; padding-top: 1rem">
-        <h4>Professor 1:</h4>
-      </div>
-      <div class="grafc" style="align-items: center; margin-left: 1rem;">
-        <div class="mediap1">
-          <h2><b>0.00</b></h2>
-        </div>
-        <div id="barra">
-          <div id="valor" style="background-color: #2F3C7E; height: 15px; width: 30%; border-radius: 3px;"></div>
-        </div>
-      </div>
+          <div class="grafc" style="align-items: center; margin-left: 1rem;">
+            <div><b>Prazos:</b></div>
+            <div class="prazos">
+              <h3 class="mini-n"><b>0.00</b></h3>
+            </div>
+            <div id="mini-b">
+              <div id="mini-valor" class="mini-v" ></div>
+            </div>
+          </div>
+          <div class="grafc" style="align-items: center; margin-left: 1rem;">
+            <div><b>Didática:</b></div>
+            <div class="didatica">
+              <h3 class="mini-n"><b>0.00</b></h3>
+            </div>
+            <div id="mini-b">
+              <div id="mini-valor" class="mini-v" ></div>
+            </div>
+          </div>
+          <div class="grafc" style="align-items: center; margin-left: 1rem;">
+            <div><b>Leal ao Plano de Ensino:</b></div>
+            <div class="ensino">
+              <h3 class="mini-n"><b>0.00</b></h3>
+            </div>
+            <div id="mini-b">
+              <div id="mini-valor" class="mini-v" ></div>
+            </div>
+          </div>
+          <div class="grafc" style="align-items: center; margin-left: 1rem;">
+            <div><b>Prestatividade:</b></div>
+            <div class="prestatividade">
+              <h3 class="mini-n"><b>0.00</b></h3>
+            </div>
+            <div id="mini-b">
+              <div id="mini-valor" class="mini-v" ></div>
+            </div>
+          </div>
+          <div class="grafc" style="align-items: center; margin-left: 1rem;">
+            <div><b>Domínio do Assunto:</b></div>
+            <div class="dominio">
+              <h3 class="mini-n"><b>0.00</b></h3>
+            </div>
+            <div id="mini-b">
+              <div id="mini-valor" class="mini-v" ></div>
+            </div>
+          </div>
+          
+          <div class="cmt-tit" style="margin-left: 1rem;"><b>Comentários:</b>
+            <br>
+            <div class="coment" style="margin: 1rem;">Nenhum comentário adicionado.</div>
+          </div>
+          <!-- <div>
+            <button class="download-btn" onclick="geraPdf()">Baixar Resultados</button>
+          </div> -->
 
-      <div style="padding-left: 1rem; padding-top: 1rem">
-        <h4>Professor 2:</h4>
-      </div>
-      <div class="grafc" style=" align-items: center; margin-left: 1rem; padding-bottom: 1rem;">
-        <div class="mediap2">
-          <h2><b>0.00</b></h2>
         </div>
-        <div id="barra2">
-          <div id="valor2" style="background-color: #2F3C7E; height: 15px; width: 30%; border-radius: 3px;"></div>
+       
+      </section>
+        
+      <section style="background-color: #f0f0f0;" class="desc-prof">
+        <div style="padding-left: 1rem; padding-top: 5px;">
+          <h4>NOME DO PROFESSOR 2:</h4>
         </div>
-      </div>
+          <div>
+            <img class="arrow rt" src="./img/icons8-v-50.png" alt="">
+          </div>
+          <div class="txt-prof">
+          <div style="display: flex; margin-top: 10px;">
+            <img
+              src="./img/ícone-masculino-da-imagem-do-perfil-do-avatar-do-defeito-placeholder-cinzento-da-foto-do-homem-88414414.jpg"
+              alt="" class="foto" style="margin-left: 1rem;"> 
+              
+          </div>
+        
+        
+        <div class="grafc" style=" align-items: center; margin-left: 1rem; padding-bottom: 1rem;">
+          <div class="mediap2">
+            <h2><b>0.00</b></h2>
+          </div>
+          <div id="barra2">
+            <div id="valor2" style="background-color: #2F3C7E; height: 15px; width: 30%; border-radius: 3px;"></div>
+          </div>
+        </div>
 
+        <div class="grafc" style="align-items: center; margin-left: 1rem;">
+          <div><b>Prazos:</b></div>
+          <div class="prazos">
+            <h3 class="mini-n2"><b>0.00</b></h3>
+          </div>
+          <div id="mini-b">
+            <div id="mini-valor2" class="mini-v" ></div>
+          </div>
+        </div>
+        <div class="grafc" style="align-items: center; margin-left: 1rem;">
+          <div><b>Didática:</b></div>
+          <div class="didatica">
+            <h3 class="mini-n2"><b>0.00</b></h3>
+          </div>
+          <div id="mini-b">
+            <div id="mini-valor2" class="mini-v" ></div>
+          </div>
+        </div>
+        <div class="grafc" style="align-items: center; margin-left: 1rem;">
+          <div><b>Leal ao Plano de Ensino:</b></div>
+          <div class="ensino">
+            <h3 class="mini-n2"><b>0.00</b></h3>
+          </div>
+          <div id="mini-b">
+            <div id="mini-valor2" class="mini-v" ></div>
+          </div>
+        </div>
+        <div class="grafc" style="align-items: center; margin-left: 1rem;">
+          <div><b>Prestatividade:</b></div>
+          <div class="prestatividade">
+            <h3 class="mini-n2"><b>0.00</b></h3>
+          </div>
+          <div id="mini-b">
+            <div id="mini-valor2" class="mini-v" ></div>
+          </div>
+        </div>
+        <div class="grafc" style="align-items: center; margin-left: 1rem;">
+          <div><b>Domínio do Assunto:</b></div>
+          <div class="dominio">
+            <h3 class="mini-n2"><b>0.00</b></h3>
+          </div>
+          <div id="mini-b">
+            <div id="mini-valor2" class="mini-v" ></div>
+          </div>
+        </div>
+
+        <div class="cmt-tit" style="margin-left: 1rem;"><b>Comentários:</b>
+          <br>
+          <div class="coment" style="margin: 1rem;">Nenhum comentário adicionado.</div>
+        </div>
+        <!-- <div>
+          <button class="download-btn">Baixar Resultados</button>
+        </div> -->
+
+        </div>
+        
+      </section>
     </section>
   </section>
 
@@ -102,9 +242,12 @@
         <div><img class="foto"
             src="./img/ícone-masculino-da-imagem-do-perfil-do-avatar-do-defeito-placeholder-cinzento-da-foto-do-homem-88414414.jpg"
             alt=""></div>
-        <div style="margin: 5px;"><b>Nome do Professor 1</b></div>
-        <img class="arrow" src="./img/icons8-v-50.png" width="20px" height="15px" style=" margin-left: 50%; margin-top: 5px ;" alt="">
+        <div style="margin: 5px;"><b>NOME DO PROFESSOR</b></div>
+        <img class="arrow" src="./img/icons8-v-50.png" width="20px" height="15px" style=" position: absolute; right: 0; margin-top: 5px ;" alt="">
       </div>
+      <div class="desc"><div class="txt">Entusiasta da gestão em serviços, pessoas e tecnologias aplicadas à inovação de negócios.
+        Mestre em Economia - UFPE. MBA - Gestão Estratégica de Marketing - PUC-GO/UCAM.
+        Pós-Graduação em Gestão do Ensino Superior - CRUB/IGLU.</div></div>
       <div id="titulo">
         O Professor cumpre os horários ?
       </div>
@@ -166,7 +309,7 @@
         <label for="star1p4" class="label p4"></label>
       </div>
       <div id="titulo">
-        O Professor é respeitoso com os alunos em sala de aula?
+        O Professor se dispõe a ajudar alunos com dificuldades ?
       </div>
       <div class="rating" style="margin-bottom: 5px;">
         <input type="radio" id="star5p5" class="star p5" name="rating" value="1" />
@@ -180,6 +323,8 @@
         <input type="radio" id="star1p5" class="star p5" name="rating" value="5" />
         <label for="star1p5" class="label p5"></label>
       </div>
+      <div id="titulo"><b>Comentários adicionais</b> (opcional)</div>
+      <input type="text" name="" class="cmt" style="margin: 8px; width: 50%;">
       <div class="result f1"></div>
     </section>
     <section class="container b">
@@ -187,8 +332,12 @@
         <div><img
             src="./img/ícone-masculino-da-imagem-do-perfil-do-avatar-do-defeito-placeholder-cinzento-da-foto-do-homem-88414414.jpg"
             alt="" style="width: 70px; float: left;"></div>
-        <div style="margin: 5px;"><b>Nome do Professor 1</b></div>
+        <div style="margin: 5px;"><b>NOME DO PROFESSOR</b></div>
+        <img class="arrow" src="./img/icons8-v-50.png" width="20px" height="15px" style=" position: absolute; right: 0; margin-top: 5px ;" alt="">
       </div>
+      <div class="desc"><div class="txt">Entusiasta da gestão em serviços, pessoas e tecnologias aplicadas à inovação de negócios.
+        Mestre em Economia - UFPE. MBA - Gestão Estratégica de Marketing - PUC-GO/UCAM.
+        Pós-Graduação em Gestão do Ensino Superior - CRUB/IGLU.</div></div>
       <div id="titulo">
         O Professor cumpre os horários ?
       </div>
@@ -250,7 +399,7 @@
         <label for="star1p9" class="label p9"></label>
       </div>
       <div id="titulo">
-        O Professor é respeitoso com os alunos em sala de aula?
+        O Professor se dispõe a ajudar alunos com dificuldades ?
       </div>
       <div class="rating">
         <input type="radio" id="star5p10" class="star p10" name="rating" value="1" />
@@ -264,12 +413,14 @@
         <input type="radio" id="star1p10" class="star p10" name="rating" value="5" />
         <label for="star1p10" class="label p10"></label>
       </div>
+      <div id="titulo"><b>Comentários adicionais</b> (opcional)</div>
+      <input type="text" name="" class="cmt" style="margin: 8px; width: 50%;">
       <div class="result f2"></div>
     </section>
-    <section class="container" style="padding-top: 10px;">
+    <!-- <section class="container" style="padding-top: 10px;">
       <div id="titulo">Insira o seu E-mail</div>
       <input type="email" name="" class="email">
-    </section>
+    </section> -->
 
     <section class="container" id="aviso" style="display: flex; justify-content: center;">
 
@@ -282,7 +433,9 @@
 
   </section>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
   <script src="script.js"></script>
+  
   <!-- SERVICE WORKER -->
   <script>
     if ('serviceWorker' in navigator) {

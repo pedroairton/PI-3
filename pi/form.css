@@ -12,6 +12,9 @@ body{
 .graf{
   grid-column: 2/3;
 }
+.grafc{
+  padding-bottom: 2rem;
+}
 .login{
     grid-column: 2/3;
     padding-top: 20px;
@@ -94,28 +97,62 @@ form {
 }
 .foto{
   width: 70px;
-  float: left;
+  /* float: left; */
 }
 /* SETA DE INTERAÇAO */
 .arrow{
   transform: rotate(-90deg);
   cursor: pointer;
+  transition: transform 0.3s;
+  width: 20px;
+  height: 15px;
 }
-
-.ang-ex{
-  animation-name: ang;
-  animation-duration: 0.5s;
+.rt{
+  margin-left: 1rem;
+  margin-top: 5px;
   transform: rotate(0deg);
 }
-@keyframes ang {
-  from {
-    transform: rotate(-90deg);
-  }
-  to{
-    transform: rotate(0deg);
-  }
+.txt-prof{
+  transition: height 0.3s, opacity 0.2s;
+  /* height: 15rem; */
 }
-
+.desc{
+  background-color:#f0f0f0;
+  margin-bottom: 1rem;
+  transition: height 0.3s;
+  height: 0px;
+}
+.txt{
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.cmt{
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+.cmt textarea {
+  width: 100%;
+  height: 100px;
+  resize: vertical;
+}
+.coment{
+  padding-bottom: 2rem;
+}
+.download-btn{
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+  background-color: #2F3C7E;
+  border: none;
+  color: white;
+  padding: 5px 21px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 13px;
+  cursor: pointer;
+  border-radius: 3%;
+}
 #logo {
   grid-column: 2/3;
   justify-content: center;
@@ -133,7 +170,7 @@ form {
 #nome{
   /* justify-content: center; */
   display: flex;
-  margin-bottom: 1rem;
+  /* margin-bottom: 1rem; */
   margin-top: 1rem;
   background-color: #f0f0f0;    
   
@@ -239,7 +276,31 @@ cursor: pointer;
 #barra, #barra2{
     animation: bar 2s;
     width: 30%;
-    background-color: #f0f0f0;
+    background-color: #e6e6e6;
+    border: 1px solid #ccc;
+    border-radius: 7%;
+}
+#mini-b{
+  animation: minibar 2s;
+  width: 20%;
+  background-color: #e6e6e6;
+  border: 1px solid #ccc;
+  border-radius: 10%;
+}
+.mini-v{
+  background-color: #2F3C7E; 
+  height: 8px; 
+  width: 20%; 
+  border-radius: 3px;
+}
+.mini-n{
+  font-weight: bold;
+}
+.valor{
+  background-color: #2F3C7E; 
+  height: 15px; 
+  width: 30%; 
+  border-radius: 3px;
 }
 
 @keyframes show {
@@ -269,6 +330,14 @@ cursor: pointer;
     to{
         width: 30%;
     }
+}
+@keyframes minibar{
+  from{
+      width: 0%;
+  }
+  to{
+      width: 20%;
+  }
 }
 
 .email{
