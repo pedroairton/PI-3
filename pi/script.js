@@ -70,8 +70,8 @@ function calculo() {
     textop1 = document.querySelector('.mediap1')
     textop2 = document.querySelector('.mediap2')
 
-    textop1.innerHTML = (`<h2><b>${media1.toFixed(1)}</b></h2>`)
-    textop2.innerHTML = (`<h2><b>${media2.toFixed(1)}</b></h2>`)
+    textop1.innerHTML = (`<h2><b>${media1}</b></h2>`)
+    textop2.innerHTML = (`<h2><b>${media2.}</b></h2>`)
 
     let valorBarra = 50
     let barra = document.querySelector('#valor');
@@ -171,10 +171,10 @@ function calculo() {
     });
 
     mTexto.forEach(function(element, index) {
-        element.innerHTML = qt[index].toFixed(1);
+        element.innerHTML = qt[index];
     });
     mTexto2.forEach(function(element, index) {
-        element.innerHTML = qt2[index].toFixed(1);
+        element.innerHTML = qt2[index];
     });
 
     mBarra.forEach(function (element, index) {
