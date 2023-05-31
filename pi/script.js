@@ -62,8 +62,6 @@ function calculo() {
 
     // EXPORT
 
-    exports.media1 = media1
-    exports.media2 = media2
 
 
     // BARRA GRAFICO
