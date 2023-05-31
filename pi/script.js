@@ -1,5 +1,4 @@
 
-
 let qt = []
 
 qt[0] = document.querySelectorAll('.star.p1') // O Professor cumpre os horários ?
@@ -60,6 +59,11 @@ function calculo() {
         const aviso = document.getElementById('aviso')
         aviso.innerHTML = (`<b>Preencha todos os campos.</b>`)
     }
+
+    // EXPORT
+
+    exports.media1 = media1
+    exports.media2 = media2
 
 
     // BARRA GRAFICO
@@ -248,6 +252,8 @@ document.addEventListener("DOMContentLoaded", function() {
     botaoLogin.addEventListener("click", function() {
       var login = loginInput.value;
       var senha = senhaInput.value;
+      const graf = document.querySelector('.graf')
+      const loginp = document.querySelector('.login')
       const loginpg = document.querySelector('.login')
       const page = document.querySelector('.page')
   
@@ -255,14 +261,16 @@ document.addEventListener("DOMContentLoaded", function() {
         alert("Login realizado com sucesso!");
         loginpg.classList.add('unactive')
         page.classList.remove('unactive')
+      } else if(login === "prof" && senha === '123'){
+        alert("Login realizado com sucesso!");
+        loginp.classList.add('unactive')
+        graf.classList.remove('unactive')
       } else {
         alert("Login ou senha incorretos!");
       }
     });
   });
   
-
-
 function graf() {
     const graf = document.querySelector('.graf')
     const login = document.querySelector('.login')
@@ -397,5 +405,5 @@ label.forEach(function(emt,idx,ary) {
 // INPUT BOX CLEAR
 
 
-// PDF
+
 

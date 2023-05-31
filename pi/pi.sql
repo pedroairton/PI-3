@@ -10,6 +10,6 @@ CREATE TABLE respostas (
   q4 INT NOT NULL,
   q5 INT NOT NULL,
   comentario text,
-  realizado_em timestamp TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  realizado_em timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (id)
 );
