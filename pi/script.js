@@ -1,3 +1,5 @@
+
+
 let qt = []
 
 qt[0] = document.querySelectorAll('.star.p1') // O Professor cumpre os horários ?
@@ -74,7 +76,7 @@ function calculo() {
 
     barra.style.width = valorBarra + '%';
         
-    valorBarra = (media1*10)*2;
+    valorBarra = (media1*10);
     // console.log(valorBarra +' valorbarra')
     barra.style.width = valorBarra + '%';
 
@@ -84,30 +86,30 @@ function calculo() {
 
     barra2.style.width = valorBarra2 + '%';
         
-    valorBarra2 = (media2*10)*2;
+    valorBarra2 = (media2*10);
     barra2.style.width = valorBarra2 + '%';
 
     console.log(valorBarra,+''+valorBarra2)
 
     // VERDE CLARO
-    if(media1 >= 4.0 && media1 < 4.5) {
+    if(media1 >= 7.0 && media1 < 8.0) {
         barra.style.backgroundColor = '#14ca00'
         textop1.style.color = '#14ca00'
     }
     // VERDE ESCURO
-    else if(media1 >= 4.5) {
+    else if(media1 >= 8.0) {
         barra.style.backgroundColor = '#0d7d00'
         textop1.style.color = '#0d7d00'
     }
 
     //AMARELO
-    else if(media1 >= 3.0 && media1 < 4.0) {
+    else if(media1 >= 5.0 && media1 < 7.0) {
         barra.style.backgroundColor = '#ffd700'
         textop1.style.color = '#b6aa00'
     }
     
     //VERMELHO
-    else if(media1 >= 0.0 && media1 < 3.0) {
+    else if(media1 >= 0.0 && media1 < 5.0) {
         barra.style.backgroundColor = '#ce0000'
         textop1.style.color = '#ce0000'
     }
@@ -115,24 +117,24 @@ function calculo() {
     // BARRA DE GRÁFICO 2 ----------------------------------------------
     
     // VERDE CLARO
-    if(media2 >= 4.0 && media2 < 4.5) {
+    if(media2 >= 7.0 && media2 < 8.0) {
         barra2.style.backgroundColor = '#14ca00'
         textop2.style.color = '#14ca00'
     }
     // VERDE ESCURO
-    else if(media2 >= 4.5) {
+    else if(media2 >= 8.0) {
         barra2.style.backgroundColor = '#0d7d00'
         textop2.style.color = '#0d7d00'
     }
 
     //AMARELO
-    else if(media2 >= 3.0 && media2 < 4.0) {
+    else if(media2 >= 5.0 && media2 < 7.0) {
         barra2.style.backgroundColor = '#ffd700'
         textop2.style.color = '#b6aa00'
     }
     
     //VERMELHO
-    else if(media2 >= 0.0 && media2 < 3.0) {
+    else if(media2 >= 0.0 && media2 < 5.0) {
         barra2.style.backgroundColor = '#ce0000'
         textop2.style.color = '#ce0000'
     }
@@ -174,32 +176,32 @@ function calculo() {
     });
 
     mBarra.forEach(function (element, index) {
-        if (qt[index] >= 4.0 && qt[index] < 4.5) {
+        if (qt[index] >= 7.0 && qt[index] < 8.0) {
             element.style.backgroundColor = '#14ca00';
             mTexto[index].style.color = '#14ca00';
-        } else if (qt[index] >= 4.5) {
+        } else if (qt[index] >= 8.0) {
             element.style.backgroundColor = '#0d7d00';
             mTexto[index].style.color = '#0d7d00';
-        } else if (qt[index] >= 3.0 && qt[index] < 4.0) {
+        } else if (qt[index] >= 5.0 && qt[index] < 7.0) {
             element.style.backgroundColor = '#ffd700';
             mTexto[index].style.color = '#b6aa00';
-        } else if (qt[index] >= 0.0 && qt[index] < 3.0) {
+        } else if (qt[index] >= 0.0 && qt[index] < 5.0) {
             element.style.backgroundColor = '#ce0000';
             mTexto[index].style.color = '#ce0000';
         }
     });
 
     mBarra2.forEach(function (element, index) {
-        if (qt2[index] >= 4.0 && qt2[index] < 4.5) {
+        if (qt2[index] >= 7.0 && qt2[index] < 8.0) {
             element.style.backgroundColor = '#14ca00';
             mTexto2[index].style.color = '#14ca00';
-        } else if (qt2[index] >= 4.5) {
+        } else if (qt2[index] >= 8.0) {
             element.style.backgroundColor = '#0d7d00';
             mTexto2[index].style.color = '#0d7d00';
-        } else if (qt2[index] >= 3.0 && qt2[index] < 4.0) {
+        } else if (qt2[index] >= 5.0 && qt2[index] < 7.0) {
             element.style.backgroundColor = '#ffd700';
             mTexto2[index].style.color = '#b6aa00';
-        } else if (qt2[index] >= 0.0 && qt2[index] < 3.0) {
+        } else if (qt2[index] >= 0.0 && qt2[index] < 5.0) {
             element.style.backgroundColor = '#ce0000';
             mTexto2[index].style.color = '#ce0000';
         }
@@ -207,14 +209,60 @@ function calculo() {
 
     
 
+    var rating1 = document.getElementById('rating1').value;
+    var rating2 = document.getElementById('rating2').value;
+    var rating3 = document.getElementById('rating3').value;
+    var rating4 = document.getElementById('rating4').value;
+    var rating5 = document.getElementById('rating5').value;
+    var comentario = document.getElementsByClassName('cmt').value;
 
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', 'call.php', true);
+    xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+        console.log(xhr.responseText);
+      }
+    };
+    xhr.send('rating1=' + rating1 + '&rating2=' + rating2 + '&rating3=' + rating3 + '&rating4=' + rating4 + '&rating5=' + rating5 + '&comentario=' + comentario);
 }
-function login() {
-    const login = document.querySelector('.login')
-    const page = document.querySelector('.page')
-    login.classList.add('unactive')
-    page.classList.remove('unactive')
-}
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    var loginInput = document.querySelector(".logbt");
+    var senhaInput = document.querySelector(".senhabt");
+    var botaoLogin = document.querySelector(".btnlog");
+  
+    loginInput.addEventListener("focus", function() {
+      if (loginInput.value === "Login") {
+        loginInput.value = "";
+      }
+    });
+  
+    senhaInput.addEventListener("focus", function() {
+      if (senhaInput.value === "Senha") {
+        senhaInput.value = "";
+      }
+    });
+  
+    botaoLogin.addEventListener("click", function() {
+      var login = loginInput.value;
+      var senha = senhaInput.value;
+      const loginpg = document.querySelector('.login')
+      const page = document.querySelector('.page')
+  
+      if (login === "user" && senha === "123") {
+        alert("Login realizado com sucesso!");
+        loginpg.classList.add('unactive')
+        page.classList.remove('unactive')
+      } else {
+        alert("Login ou senha incorretos!");
+      }
+    });
+  });
+  
+
+
 function graf() {
     const graf = document.querySelector('.graf')
     const login = document.querySelector('.login')
@@ -228,6 +276,15 @@ function retorno() {
     msg.classList.add('unactive')
     login.classList.remove('unactive')
 }
+
+const start = document.querySelector('.logoff')
+const idle = document.querySelector('.idle')
+
+start.addEventListener('click', function() {
+    idle.classList.add('unactive')
+    const login = document.querySelector('.login')
+    login.classList.remove('unactive')
+})
 
 // ESTILIZAÇÃO
 
@@ -339,14 +396,6 @@ label.forEach(function(emt,idx,ary) {
 
 // INPUT BOX CLEAR
 
-const log = document.querySelector('.log')
-const pw = document.querySelector('.pw')
-function cleanTextLog() {
-    log.value=''
-}
-function cleanTextPw() {
-    pw.value=''
-}
 
 // PDF
 

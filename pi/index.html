@@ -15,20 +15,26 @@
 <body>
 
   <section id="logo" style="margin-bottom: 1rem;">
-    <img src="./img/ff.png" width="48" height="48" alt="senaclogo">
+    <img src="./img/ff.png" class="unactive" width="48" height="48" alt="fflogo">
   </section>
-
+  <!-- PÁGINA IDLE (APENAS APRESENTAÇÃO) -->
+  <section class="idle">
+    <div style="justify-content: center; display: flex;">
+      <img src="./img/ff.png" alt="" style="width: 10%; height: 10%;" class="logoff">
+    </div>
+      
+  </section>
   <!-- PÁGINA DE LOGIN -->
-  <section class="login ">
+  <section class="login unactive">
     <section class="containerlog">
       <div style="display: flex; justify-content: center;">
         <img src="./img/ff2.png" width="128" height="128" alt="">
       </div>
       <div style="display: flex; justify-content: center; padding-top: 2rem;">
-        <input type="text" value="Login" onfocus="cleanTextLog(this)" class="log" style="width: 30%;">
+        <input class="logbt" type="text" value="Login" class="log" style="width: 30%;">
       </div>
       <div style="display: flex; justify-content: center; padding-top: 1rem;">
-        <input type="password" value="Senha" onfocus="cleanTextPw()" class="pw" style="width: 30%;">
+        <input class="senhabt" type="password" value="Senha" class="pw" style="width: 30%;">
       </div>
 
       <div style="display: flex; justify-content: center;">
@@ -236,8 +242,8 @@
     <section id="topo">
       <b>FORMULÁRIO DE AVALIAÇÃO</b>
     </section>
-
     <section class="container a">
+      
       <div id="nome">
         <div><img class="foto"
             src="./img/ícone-masculino-da-imagem-do-perfil-do-avatar-do-defeito-placeholder-cinzento-da-foto-do-homem-88414414.jpg"
@@ -248,11 +254,16 @@
       <div class="desc"><div class="txt">Entusiasta da gestão em serviços, pessoas e tecnologias aplicadas à inovação de negócios.
         Mestre em Economia - UFPE. MBA - Gestão Estratégica de Marketing - PUC-GO/UCAM.
         Pós-Graduação em Gestão do Ensino Superior - CRUB/IGLU.</div></div>
+
+
       <div id="titulo">
         O Professor cumpre os horários ?
       </div>
+     
       <div class="rating">
-        <input type="radio" id="star5p1" class="star p1" name="rating" value="1" />
+        <input type="range" name="rating1" id="rating1" class="star p1" min="0" max="10" step="1">
+
+        <!-- <input type="radio" id="star5p1" class="star p1" name="rating" value="1" />
         <label for="star5p1" class="label p1"></label>
         <input type="radio" id="star4p1" class="star p1" name="rating" value="2" />
         <label for="star4p1" class="label p1"></label>
@@ -261,70 +272,46 @@
         <input type="radio" id="star2p1" class="star p1" name="rating" value="4" />
         <label for="star2p1" class="label p1"></label>
         <input type="radio" id="star1p1" class="star p1" name="rating" value="5" />
-        <label for="star1p1" class="label p1"></label>
+        <label for="star1p1" class="label p1"></label> -->
       </div>
       <div id="titulo">
         O Professor segue o material de estudo ?
       </div>
-      <div class="rating p2">
-        <input type="radio" id="star5p2" class="star p2" name="rating" value="1" />
-        <label for="star5p2" class="label p2"></label>
-        <input type="radio" id="star4p2" class="star p2" name="rating" value="2" />
-        <label for="star4p2" class="label p2"></label>
-        <input type="radio" id="star3p2" class="star p2" name="rating" value="3" />
-        <label for="star3p2" class="label p2"></label>
-        <input type="radio" id="star2p2" class="star p2" name="rating" value="4" />
-        <label for="star2p2" class="label p2"></label>
-        <input type="radio" id="star1p2" class="star p2" name="rating" value="5" />
-        <label for="star1p2" class="label p2"></label>
+      <div class="rating">
+
+        <input type="range" name="rating2" id="rating2" class="star p2" min="0" max="10" step="1">
+
+        
       </div>
       <div id="titulo">
         O Professor apresenta conteúdos de maneira clara e objetiva?
       </div>
       <div class="rating">
-        <input type="radio" id="star5p3" class="star p3" name="rating" value="1" />
-        <label for="star5p3" class="label p3"></label>
-        <input type="radio" id="star4p3" class="star p3" name="rating" value="2" />
-        <label for="star4p3" class="label p3"></label>
-        <input type="radio" id="star3p3" class="star p3" name="rating" value="3" />
-        <label for="star3p3" class="label p3"></label>
-        <input type="radio" id="star2p3" class="star p3" name="rating" value="4" />
-        <label for="star2p3" class="label p3"></label>
-        <input type="radio" id="star1p3" class="star p3" name="rating" value="5" />
-        <label for="star1p3" class="label p3"></label>
+
+        <input type="range" name="rating3" id="rating3" class="star p3" min="0" max="10" step="1">
+
+       
       </div>
       <div id="titulo">
         O Professor tem domínio sobre o conteúdo abordado nas aulas?
       </div>
       <div class="rating">
-        <input type="radio" id="star5p4" class="star p4" name="rating" value="1" />
-        <label for="star5p4" class="label p4"></label>
-        <input type="radio" id="star4p4" class="star p4" name="rating" value="2" />
-        <label for="star4p4" class="label p4"></label>
-        <input type="radio" id="star3p4" class="star p4" name="rating" value="3" />
-        <label for="star3p4" class="label p4"></label>
-        <input type="radio" id="star2p4" class="star p4" name="rating" value="4" />
-        <label for="star2p4" class="label p4"></label>
-        <input type="radio" id="star1p4" class="star p4" name="rating" value="5" />
-        <label for="star1p4" class="label p4"></label>
+
+        <input type="range" name="rating4" id="rating4" class="star p4" min="0" max="10" step="1">
+
+        
       </div>
       <div id="titulo">
         O Professor se dispõe a ajudar alunos com dificuldades ?
       </div>
       <div class="rating" style="margin-bottom: 5px;">
-        <input type="radio" id="star5p5" class="star p5" name="rating" value="1" />
-        <label for="star5p5" class="label p5"></label>
-        <input type="radio" id="star4p5" class="star p5" name="rating" value="2" />
-        <label for="star4p5" class="label p5"></label>
-        <input type="radio" id="star3p5" class="star p5" name="rating" value="3" />
-        <label for="star3p5" class="label p5"></label>
-        <input type="radio" id="star2p5" class="star p5" name="rating" value="4" />
-        <label for="star2p5" class="label p5"></label>
-        <input type="radio" id="star1p5" class="star p5" name="rating" value="5" />
-        <label for="star1p5" class="label p5"></label>
+
+        <input type="range" name="rating5" id="rating5" class="star p5" min="0" max="10" step="1">
+
       </div>
       <div id="titulo"><b>Comentários adicionais</b> (opcional)</div>
-      <input type="text" name="" class="cmt" style="margin: 8px; width: 50%;">
+      <input type="text" name="cmt1" class="cmt" style="margin: 8px; width: 50%;">
+
       <div class="result f1"></div>
     </section>
     <section class="container b">
@@ -342,7 +329,10 @@
         O Professor cumpre os horários ?
       </div>
       <div class="rating">
-        <input type="radio" id="star5p6" class="star p6" name="rating" value="1" />
+
+        <input type="range" name="rating" id="starp6" class="star p6" min="0" max="10" step="1">
+
+        <!-- <input type="radio" id="star5p6" class="star p6" name="rating" value="1" />
         <label for="star5p6" class="label p6"></label>
         <input type="radio" id="star4p6" class="star p6" name="rating" value="2" />
         <label for="star4p6" class="label p6"></label>
@@ -351,67 +341,44 @@
         <input type="radio" id="star2p6" class="star p6" name="rating" value="4" />
         <label for="star2p6" class="label p6"></label>
         <input type="radio" id="star1p6" class="star p6" name="rating" value="5" />
-        <label for="star1p6" class="label p6"></label>
+        <label for="star1p6" class="label p6"></label> -->
+
       </div>
       <div id="titulo">
         O Professor segue o material de estudo ?
       </div>
       <div class="rating">
-        <input type="radio" id="star5p7" class="star p7" name="rating" value="1" />
-        <label for="star5p7" class="label p7"></label>
-        <input type="radio" id="star4p7" class="star p7" name="rating" value="2" />
-        <label for="star4p7" class="label p7"></label>
-        <input type="radio" id="star3p7" class="star p7" name="rating" value="3" />
-        <label for="star3p7" class="label p7"></label>
-        <input type="radio" id="star2p7" class="star p7" name="rating" value="4" />
-        <label for="star2p7" class="label p7"></label>
-        <input type="radio" id="star1p7" class="star p7" name="rating" value="5" />
-        <label for="star1p7" class="label p7"></label>
+
+        <input type="range" name="rating" id="starp7" class="star p7" min="0" max="10" step="1">
+
+        
       </div>
       <div id="titulo">
         O Professor apresenta conteúdos de maneira clara e objetiva?
       </div>
       <div class="rating">
-        <input type="radio" id="star5p8" class="star p8" name="rating" value="1" />
-        <label for="star5p8" class="label p8"></label>
-        <input type="radio" id="star4p8" class="star p8" name="rating" value="2" />
-        <label for="star4p8" class="label p8"></label>
-        <input type="radio" id="star3p8" class="star p8" name="rating" value="3" />
-        <label for="star3p8" class="label p8"></label>
-        <input type="radio" id="star2p8" class="star p8" name="rating" value="4" />
-        <label for="star2p8" class="label p8"></label>
-        <input type="radio" id="star1p8" class="star p8" name="rating" value="5" />
-        <label for="star1p8" class="label p8"></label>
+
+        <input type="range" name="rating" id="starp8" class="star p8" min="0" max="10" step="1">
+
+        
       </div>
       <div id="titulo">
         O Professor tem domínio sobre o conteúdo abordado nas aulas?
       </div>
       <div class="rating">
-        <input type="radio" id="star5p9" class="star p9" name="rating" value="1" />
-        <label for="star5p9" class="label p9"></label>
-        <input type="radio" id="star4p9" class="star p9" name="rating" value="2" />
-        <label for="star4p9" class="label p9"></label>
-        <input type="radio" id="star3p9" class="star p9" name="rating" value="3" />
-        <label for="star3p9" class="label p9"></label>
-        <input type="radio" id="star2p9" class="star p9" name="rating" value="4" />
-        <label for="star2p9" class="label p9"></label>
-        <input type="radio" id="star1p9" class="star p9" name="rating" value="5" />
-        <label for="star1p9" class="label p9"></label>
+
+        <input type="range" name="rating" id="starp9" class="star p9" min="0" max="10" step="1">
+        
+        
       </div>
       <div id="titulo">
         O Professor se dispõe a ajudar alunos com dificuldades ?
       </div>
       <div class="rating">
-        <input type="radio" id="star5p10" class="star p10" name="rating" value="1" />
-        <label for="star5p10" class="label p10"></label>
-        <input type="radio" id="star4p10" class="star p10" name="rating" value="2" />
-        <label for="star4p10" class="label p10"></label>
-        <input type="radio" id="star3p10" class="star p10" name="rating" value="3" />
-        <label for="star3p10" class="label p10"></label>
-        <input type="radio" id="star2p10" class="star p10" name="rating" value="4" />
-        <label for="star2p10" class="label p10"></label>
-        <input type="radio" id="star1p10" class="star p10" name="rating" value="5" />
-        <label for="star1p10" class="label p10"></label>
+
+        <input type="range" name="rating" id="starp10" class="star p10" min="0" max="10" step="1">
+
+        
       </div>
       <div id="titulo"><b>Comentários adicionais</b> (opcional)</div>
       <input type="text" name="" class="cmt" style="margin: 8px; width: 50%;">
@@ -426,11 +393,12 @@
 
     </section>
     <div id="envio">
-      <button onclick="calculo()" class="send">
+      <button onclick="calculo()" class="send" type="submit">
         <b>Enviar</b>
       </button>
-    </div>
 
+    </div>
+  
   </section>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>

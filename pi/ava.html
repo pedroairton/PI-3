@@ -1,31 +1,49 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="ava.css">
+  <title>Document</title>
 </head>
 <body>
-    
+  <label for="slider">Selecione um valor:</label>
+<input type="range" id="slider" name="slider" min="0" max="5" step="1">
+<button id="btn">Obter Valor</button>
 
-    <div id="barra" style="background-color: #ddd; height: 20px; border-radius: 5px; margin: 10px;">
-        <div id="valor" style="background-color: #007bff; height: 100%; border-radius: 5px;"></div>
-      </div>
-      
-      <script>
-        let valorBarra = 50;
-        let barra = document.querySelector('#valor');
-        
-        barra.style.width = valorBarra + '%';
-        
-        valorBarra = 75;
-        barra.style.width = valorBarra + '%';
-      </script>
-      
-    
+<script>
+  const slider = document.getElementById('slider');
+  const btn = document.getElementById('btn');
 
+  btn.addEventListener('click', function() {
+    const valor = slider.value;
+    console.log('Valor selecionado:', valor);
+  });
+</script>
 
-    <script src="script.js"></script>
 </body>
+
+<script>
+const progressBar = document.getElementById('progressBar');
+const submitButton = document.getElementById('submitButton');
+
+let progressValue = 0;
+
+submitButton.addEventListener('click', () => {
+  // Enviar e armazenar o valor de progressValue
+  console.log('Valor enviado:', progressValue);
+});
+
+progressBar.addEventListener('click', (event) => {
+  const progressBarWidth = progressBar.offsetWidth;
+  const clickX = event.clientX - progressBar.getBoundingClientRect().left;
+  const position = Math.ceil((clickX / progressBarWidth) * 5);
+
+  progressValue = position;
+
+  progressBar.style.width = `${(position / 5) * 100}%`;
+});
+
+</script>
 </html>
